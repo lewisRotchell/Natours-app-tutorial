@@ -11,6 +11,7 @@ const {
   updateUser,
   deleteUser,
   updateMe,
+  deleteMe,
 } = userController;
 
 const {
@@ -23,6 +24,7 @@ const {
 } = authController;
 
 router.patch('/updateMe', protect, updateMe);
+router.delete('/deleteMe', protect, deleteMe);
 
 router.post('/signup', signup);
 router.post('/login', login);
